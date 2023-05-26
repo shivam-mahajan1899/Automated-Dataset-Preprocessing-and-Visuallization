@@ -277,7 +277,7 @@ def plots(df):
 if __name__ == '__main__':
     hide_streamlit_style()
     st.title("Automated Dataset Preprocessing and Visualization")
-    data = st.file_uploader("Upload a Dataset", type=["csv","xlsx"])
+    data = st.file_uploader("Upload a Dataset", type=["csv"])
 
     if data is not None:
         processed_df = preprocess(data)
