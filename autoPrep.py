@@ -143,7 +143,7 @@ def remOutliers(df, method='winsorize', threshold=3):
     return df
 
 
-def processDataFrame(dataframe, threshold=5, ohe=True, dropFirst=False):
+def processDataFrame(dataframe, threshold=5, ohe=False, dropFirst=False):
     df_missing = dataframe
     if df_missing.isnull().sum().sum() != 0:
         df_missing = impute_missing_values(df_missing)
